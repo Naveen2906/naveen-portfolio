@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveen Panthangi - Portfolio</title>
+
+  <!-- Theme Initialization BEFORE CSS Loads -->
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.classList.remove('light', 'dark'); // remove from html
+      document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add(savedTheme);
+      });
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="theme-toggle">Toggle Theme</button>
+
+  <header>
+    <h1>Naveen Panthangi</h1>
+    <p>App Developer | Web Developer | .NET Developer</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="assets/profile.jpg" alt="My Photo" />
+    <p>Hello! I'm a Developer passionate about building responsive and modern websites, android applications, and web applications. I enjoy solving problems and working with the latest technologies.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <div>
+        <h3>Facial Recognition System for Criminal Identification</h3>
+        <p>Developed a face recognition system using Face Recognition library and OpenCV to identify individuals from images. Integrated a Tkinter-based GUI for easy image selection and display. Built a face encoding repository and implemented accurate face matching with clear visual labeling.</p>
+        <a href="https://github.com/Naveen2906/Face-Recognition-System-for-Criminal-Identification" target="_blank">View Project</a>
+      </div>
+    </div>
+    <div class="project">
+      <div>
+        <h3>Community Chat Application for University Students</h3>
+        <p>A real-time chat application for SCSVMV University with private chats, group chats, and public forums. Built with Firebase for secure authentication and messaging. Supports media sharing, reactions, and threaded replies to enhance communication and engagement within the campus community.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+    <div class="project">
+        <div>
+          <h3>Kamakoti - A Manuscript Image Acquisition and Task Management Application</h3>
+          <p>Building a Flutter-based task management app for the university library to assign and track image acquisition tasks. Enables scrappers to capture and upload palm leaf images via their phones, with real-time updates and admin monitoring to streamline the digitization process.</p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>C# - .NET</li>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Dart - Flutter</li>
+      <li>Python</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: saivinaypanthangi@gmail.com</p>
+    <p>LinkedIn: <a href="#">naveen-panthangi-733437277</a></p>
+    <p>GitHub: <a href="#">@Naveen2906</a></p>
+    <a href="assets/resume.pdf" target="_blank">Download Resume</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Naveen Panthangi. All rights reserved.</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      const current = body.classList.contains('light') ? 'light' : 'dark';
+      const newTheme = current === 'light' ? 'dark' : 'light';
+      body.classList.remove(current);
+      body.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+</body>
+</html>
